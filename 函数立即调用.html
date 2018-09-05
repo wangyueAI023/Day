@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //标量做参数
+        /*var strt = "tom";
+        function disp(name){
+             alert('hi '+name);
+        }
+         disp(str);
+         */
+    //--------------------------------------------
+    //函数做参数
+    /*var str = function(){
+        alert("123");
+    }
+    function show(fn){
+        fn();
+    }
+    show(str);
+    */
+    //-----------------------------------------------
+    //函数立即调用(函数)()
+    /*
+   var show = function(){
+        alert('谋士');
+    }
+    show();
+    */
+
+     //两者等同 省去了调用环节
+    /*(function(){
+        alert('谋士');
+    })()
+    */
+    //---------------------------------------------
+    //带参数
+    var show = function(name){
+        alert(name);
+    }
+    show("wangyue");
+
+
+    // (function(name){//匿名函数
+    //     alert(name);})("123")
+
+     (function show(name){//有函数名
+        alert(name);})("456")
+
+    </script>
+
+</body>
+</html>

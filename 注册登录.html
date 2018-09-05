@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+    span{color: red;}
+	</style>
+</head>
+<body>
+	用户名:
+	<input type="text" id="msg1" onblur="s1()">
+    <span id="p1"></span>
+	<br/>
+	电　话:
+	<input type="text" id="msg2" onblur="s2()">
+    <span id="p2"></span>
+<script type="text/javascript">
+	var oMsg1=document.getElementById("msg1");
+	var oMsg2=document.getElementById("msg2");
+	var oP1=document.getElementById("p1");
+	var oP2=document.getElementById("p2");
+	
+	oMsg1.value=msg1.value;
+	oMsg2.value=msg2.value;
+    oP1.innerText=p1.innerText;
+    oP2.innerText=p2.innerText;
+    un="";
+     function s1(){
+     	/*alert();*/
+        bool=isNaN(oMsg1.value);
+        if(oMsg1.value==un){
+            oP1.innerText="用户名不能为空!";
+        }else{
+            if (bool==false) {
+            oP1.innerText="用户名不能是纯数字!";
+            oP1.style.color="#f00";
+        }else{
+
+            oP1.innerText="输入成功!";
+            oP1.style.color="#0f0";
+
+            
+        }
+        }
+       
+
+     }
+     function s2(){
+     	bool=isNaN(oMsg2.value);
+        if(oMsg2.value==un){
+            oP2.innerText="密码不能为空!";
+        }else{
+              if (bool==true) {
+        	              oP2.innerText="电话号码必须是数字!";
+                        oP2.style.color="#f00";
+
+              }else{
+        	           oP2.innerText="输入成功!";
+                     oP2.style.color="#0f0";
+                    }
+              }
+     }
+
+</script>
+</body>
+</html>

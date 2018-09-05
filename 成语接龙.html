@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	请输入:
+	<input type="text" id="msg">
+	<button id="btn">确定</button><span id="s1"></span>
+	<p id="p1">走马观花</p>
+	<script type="text/javascript">
+		var oMsg=document.getElementById("msg");
+		var oBtn=document.getElementById("btn");
+		var oP1=document.getElementById("p1");
+		var oS1=document.getElementById("s1");
+		oMsg.value=msg.value;
+		oP1.innerText=p1.innerText;
+		oS1.innerText=s1.innerText;
+		un="";
+		oBtn.onclick=function(){
+			/*if (oMsg.value.length!=4) {
+				alert('不符合要求!');
+			}else{*/
+			if(oMsg.value==un){
+				oS1.innerText="不能为空!";
+				oS1.style.color="#f00";
+
+			}else{
+				 oS1.innerText="发送成功!";
+				 oS1.style.color="#0f0";
+				 oP1.innerText +=","+oMsg.value;
+				 oMsg.value="";
+			}
+			/*}*/
+           
+		}
+	</script>
+</body>
+</html>

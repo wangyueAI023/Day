@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li>一日看尽长安花01</li>
+            <li>一日看尽长安花02</li>
+            <li>一日看尽长安花03</li>
+            <li>一日看尽长安花04</li>
+
+        </ul>
+    </div>
+    <script>
+    var oLi=document.getElementsByTagName("li");
+    for(var i=0;i<oLi.length;i++){
+        (function(index){
+            oLi[index].onclick=function(){
+                console.log(index);
+            }
+
+
+        })(i)
+          
+        //oLi[i].title=i;
+        //oLi[i].index=i;//自定义属性
+
+        //console.log(oLi[i]);
+       //oLi[i].onclick=function(){
+        //alert(this.innerHTML);
+        //console.log(this.index,this);
+        //console.log(this.index);
+         
+        //console.log('内部:'+i);
+        //}//原因:循环已经结束,i在在此值为6
+    }
+   
+    </script>
+</body>
+</html>

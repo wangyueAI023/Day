@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //callback:回调函数 argument:参数
+    var show = function(){
+        alert('等一不归人');
+    }
+    function fn(arg, callback){
+        alert(arg);
+        //callback();
+        callback && callback();//不写callback时,函数正常使用,不会报错
+
+    }
+    fn('问灵');
+    //fn('问灵十三载',show);
+    </script>
+</body>
+</html>
