@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      /* //类,对象
+      function Pepole(name,age){
+          this.name = name;
+          this.age = age;
+      }
+      Pepole.prototype.show = function(){
+          console.log(this.name,this.age)
+      }
+      var p1 = new Pepole('王',24)
+      p1.show()
+
+      //继承
+      function Coder(name,age){
+          Pepole.call(this,name,age)
+      }
+      Coder.prototype = new Pepole();
+      Coder.prototype.constructor = Coder;
+      var p2 = new Coder('刘',23);
+      p2.show();
+ */
+    class Pepole{
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        show(){
+            console.log(`名字:${this.name},年龄:${this.age}`)
+        }
+    }
+    let p = new Pepole('顾昀',30)
+    p.show()
+    //继承
+    class Coder extends Pepole{
+        constructor(name,age,company){
+            super(name,age);
+            this.company = company;
+        }
+        showCompany(){
+            console.log(`新元素:${this.company}`)
+        }
+        static foo(){
+            console.log('静态')
+        }
+    } 
+    var c1 = new Coder('长庚',20,'四皇子')
+    c1.showCompany();
+    c1.show();
+    Coder.foo()
+    </script>
+</body>
+</html>
